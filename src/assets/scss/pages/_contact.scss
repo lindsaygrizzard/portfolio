@@ -1,0 +1,20 @@
+.contact {
+    .job-title {
+        position: fixed;
+    }
+    .menu_container {
+        background-color: grey;
+        height: 100vh;
+        z-index: 99999;
+    }
+
+    .content-1 {
+        height: 100vh;
+        background-color: #939393;
+    }
+
+    .content-2 {
+        height: 100vh;
+        background-color: #606060;
+    }
+}

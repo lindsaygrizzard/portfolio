@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "Tofino_Black";
+    src: url(../fonts/Tofino_Black.otf);
+}
+
+@font-face {
+    font-family: "Tofino_Bold";
+    src: url(../fonts/Tofino_Bold.otf);
+}
+
+@font-face {
+    font-family: "Tofino_Medium";
+    src: url(../fonts/Tofino_Medium.otf);
+}
+
+@font-face {
+    font-family: "Tofino_Regular";
+    src: url(../fonts/Tofino_Regular.otf);
+}
+
+@font-face {
+    font-family: "Tofino_Light";
+    src: url(../fonts/Tofino_Light.otf);
+}
+
+.job-title {
+    font-family: "Tofino_Bold";
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.vertical-text {
+    font-family: "Tofino_Bold";
+    text-transform: uppercase;
+    font-size: 44px;
+}
+
+.title {
+    font-family: "Tofino_Bold";
+    text-transform: uppercase;
+    font-size: 86px;
+    letter-spacing: 5px;
+}
+
+.para {
+    font-family: "Tofino_Bold";
+    font-size: 22px;
+}
+
+.nav-link {
+    font-family: "Tofino_Bold";
+    font-size: 20px;
+}
