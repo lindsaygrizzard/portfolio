@@ -187,12 +187,38 @@ $( document ).ready(function() {
 
   ////////////// start carousel ///////////////////
 
-   // $(document).ready(function() {
-    
-     $("#owl-example").owlCarousel();
-    
-   // });
+    //  $("#owl-example").owlCarousel({
+    //     singleItem:true,
+    //     navigation : true,
+    //     afterAction : afterAction
+    // });
 
-   
+    // function updateResult(pos,value){
+    //     console.log('update:::');
+    //     status.find(pos).find(".result").text(value);
+    // }
+
+    // function afterAction(){
+    //     updateResult(".currentItem", this.owl.currentItem);
+    // }
+
+    var owl = $("#owl-demo");
+      owl.owlCarousel({
+        navigation : true,
+        singleItem:true,
+        afterAction : afterAction
+      });
+     
+      function updateResult(value){
+        console.log('value::: ', value);
+
+        $('.slide-text').addClass('show');
+
+      }
+     
+      function afterAction(){
+        updateResult(this.owl.currentItem);
+
+      }
 
 });

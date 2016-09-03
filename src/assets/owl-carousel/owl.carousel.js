@@ -11,7 +11,6 @@
 /*JS Lint helpers: */
 /*global dragMove: false, dragEnd: false, $, jQuery, alert, window, document */
 /*jslint nomen: true, continue:true */
-console.log('hey girllll');
 
 
 
