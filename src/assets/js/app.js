@@ -36,7 +36,7 @@ $( document ).ready(function() {
       bg: {r:98,g:197,b:182},
       // bg: {r:200,g:200,b:200},
       matter: [
-        {r:118,g:206,b:193},
+        {r:118,g:206,b:193}, 
         {r:137,g:203,b:193}
       ]
   };
@@ -64,7 +64,7 @@ $( document ).ready(function() {
       // Color of the rock, given some randomness
       this.c = colorVariation(colorPalette.matter[Math.floor(Math.random() * colorPalette.matter.length)],true );
       // Speed of which the rock travels
-      this.s = Math.pow(Math.ceil(Math.random() * config.maxSpeed), 0.7);
+      this.s = Math.pow(Math.ceil(Math.random() * config.maxSpeed), .7);
       // Direction the Rock flies
       this.d = Math.round(Math.random() * 360);
   };
@@ -77,7 +77,7 @@ $( document ).ready(function() {
       r = Math.round(((Math.random() * config.colorVariation) - (config.colorVariation/2)) + color.r);
       g = Math.round(((Math.random() * config.colorVariation) - (config.colorVariation/2)) + color.g);
       b = Math.round(((Math.random() * config.colorVariation) - (config.colorVariation/2)) + color.b);
-      a = Math.random() + 0.5;
+      a = Math.random() + .5;
       if (returnString) {
           return "rgba(" + r + "," + g + "," + b + "," + a + ")";
       } else {
@@ -105,8 +105,8 @@ $( document ).ready(function() {
 
   // Remove particles that aren't on the canvas
   var cleanUpArray = function () {
-      particles = particles.filter((p) => {
-        return (p.x > -100 && p.y > -100);
+      particles = particles.filter((p) => { 
+        return (p.x > -100 && p.y > -100); 
       });
   };
 
@@ -187,38 +187,167 @@ $( document ).ready(function() {
 
   ////////////// start carousel ///////////////////
 
-    //  $("#owl-example").owlCarousel({
-    //     singleItem:true,
-    //     navigation : true,
-    //     afterAction : afterAction
-    // });
+  var carousel = (function () {
+   
+      //
+      var activeID = 0,
+          itemW = 940,
+          carousel_count = $('.carousel_item').length,
+          $carouselItems = $('.carousel_items'),
+          $carouselItem = $('.carousel_item'),
+          $arrowPrev = $('.item_prev'),
+          $arrowNext = $('.item_next'),
+      $itemArrow = $('.item_arrow'),
+          $navDot,
+      $navDots = $('.nav_dots'),
+          swipeDir,
+          slideSpeed = .95,
+          slideMeth = Power2.EaseInOut;
+      
+      //
+    function init() {
+       
+      $carouselItems.css({'width': (itemW * carousel_count + 20) + 'px'});
+      $navDots.css({'width': (95 * carousel_count) + 'px'});
+      $itemArrow.css({'opacity': .8});
+      
+      setupDraggable();
+      setupDots();
+      navigateSlide();
+      }
+    init();
+      
+      //
+    function setupDraggable() { 
+        
+      Draggable.create($carouselItems, {
+              type:'x',
+              edgeResistance: 0.65,
+              dragResistance: 0.0,
+              bounds:'.carousel_container',
+              onDrag:updateDirections,
+              onThrowUpdate:updateDirections,
+              throwProps:true,
+              onDragStart:function(evt) {}
+        });    
+    };
+                  
+    // set up dots
+    function setupDots() {    
+      for(var i = 0; i < carousel_count; i++) {
+        $navDots.append('<div class="nav_dot" id="dot_' + i + '"></div>');
+      }    
+      $navDot = $('.nav_dot');
+    }  
+    
+    // navigate slide
+      function navigateSlide() {
+          
+          if(activeID >= carousel_count-1) activeID = carousel_count-1;
+          if(activeID <= 0) activeID = 0;     
+                          
+          var xTarget = ((activeID * itemW) * -1);
+          
+          TweenMax.to($carouselItems, slideSpeed, {x: xTarget, ease: slideMeth, onComplete: slideDone});
+      }
+      
+      function slideDone() {
+          $navDot.css({backgroundColor: '#fff'});
+      
+      //
+          // TweenMax.to($navDot, 0.35, {scale: 1, color: 0xFFFFFF});
+          // TweenMax.to($('#item_' + activeID), 0.35, {scale: 1.5, backgroundColor: 'transparent',color: 0xCC0000});
+      
+      //
+      if(activeID === 0) {
+        // console.log('activeID if === 0',activeID);
+        $arrowPrev.fadeOut();
+      } else {
+        // console.log('activeID else ',activeID);
+        $('#text_'+activeID).fadeIn(1000);
+          $arrowPrev.fadeIn();
+      }
+      
+      if(activeID + 1 == carousel_count) {
+        // console.log('activeID +1 =count',activeID);
+        // console.log('carousel_count',carousel_count);
+        $arrowNext.fadeOut();
+      } else {
+        $('#text_'+activeID).fadeIn(1000);
+        //add description/button class to show and hide active_id -1 class
+        
+        // console.log($('#text_'+activeID));
+        // console.log('else activeID', activeID);
+        $arrowNext.fadeIn();
+      }
 
-    // function updateResult(pos,value){
-    //     console.log('update:::');
-    //     status.find(pos).find(".result").text(value);
-    // }
-
-    // function afterAction(){
-    //     updateResult(".currentItem", this.owl.currentItem);
-    // }
-
-    var owl = $("#owl-demo");
-      owl.owlCarousel({
-        navigation : true,
-        singleItem:true,
-        afterAction : afterAction
+    }
+      
+      //
+      function updateDirections() {
+          swipeDir = this.getDirection("start");
+      }
+      
+    //$itemArrow.click(function() {
+    $itemArrow.on('click', function() {
+      
+      if(Modernizr.touch) return;
+      
+      if($(this).hasClass('item_next')) {activeID++;
+      navigateSlide();}
+      else {activeID--};
+      navigateSlide();
       });
-     
-      function updateResult(value){
-        console.log('value::: ', value);
+    
+    $itemArrow.on('touchstart', function() {
+      if($(this).hasClass('item_next')) {activeID++}
+      else {activeID--};
+      
+      navigateSlide();
+      });
+    
+      $navDot.hover(      
+          function() {            
+              TweenMax.to($(this), .35, {scale: 1.5});
+          }, function() {
+               if($(this).attr('id').split('_')[1] == activeID) return;
+             TweenMax.to($(this), .35, {scale: 1.0});
+          }  
+      );
+      
+    $navDot.click(function() {        
+      var dotID = $(this).attr('id').split('_')[1];
+          activeID = dotID;
+              
+        navigateSlide();
+      });
+    
+      //
+      $carouselItem.mousedown(function() {
+          activeID = $(this).attr('id').split('_')[1];
+          $('#text_'+activeID).fadeIn(1400);
+      
+      $(this).removeClass('grab');
+      $(this).addClass('grabbing');
+      
+      });
+    
+    //   
+    $carouselItem.mouseenter(function() {
+      $(this).removeClass('grabbing');
+      $(this).addClass('grab');
+    });
 
-        $('.slide-text').addClass('show');
+    $carouselItem.mouseup(function() {
+      $(this).removeClass('grabbing');
+      $(this).addClass('grab');
+    });
 
-      }
-     
-      function afterAction(){
-        updateResult(this.owl.currentItem);
-
-      }
-
+    $('.modal_link').click(function(){
+        var parentID = $(this).parent().attr("id");
+        $(this).addClass('modal_'+parentID);
+        $('#modal_container_'+parentID).css({opacity:1}, {position:absolute});
+    });
+  })();
 });
+

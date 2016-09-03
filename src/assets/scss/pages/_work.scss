@@ -1,35 +1,160 @@
 .work-text__container {
-    #owl-demo .item{
-      background: #3fbf79;
-      padding: 30px 0px;
-      margin: 10px;
-      color: #FFF;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
-      text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    resize: vertical;
+    // overflow: auto;
+    height: 100vh;
+    ul {
+       padding: 0;
+       list-style-type: none;
     }
-    .slide-image {
-        margin-left: 7vw;
-        margin-top: 15vh;
-        height: 70vh;
-        width: 86vw;
-        background-image: url(http://placehold.it/350x350); 
+
+    .carousel_container{
         background-color: grey;
-        border: 3px solid black;
-        .slide-text {
-            transition: opacity 1s;
-            opacity: 0;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            p {
-                text-align: center;
-            }
+        resize: vertical;
+        overflow: auto;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        width: 67vw;
+        height: 78vh;
+        // overflow: hidden; 
+        z-index: 999;
+        @media screen and (max-width: 1050px) {
+            // width: 70%;
         }
-        .show {
-            opacity: 1;
+   }
+
+   .carousel_items {
+    background-color: pink;
+        height: 75vh;
+        position: relative;
+        cursor: default !important;
+   }
+
+   .carousel_item {
+        float:left;
+        border: 0px solid #cc0000;
+        .image {
+            // background-color: pink;
+            border: 3px solid black;
+            background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/231648/MB_CLA_1.jpg') no-repeat cover; 
+            margin-left: -15px;
+            height: 100vh;
+            width: 60vw;
         }
+   }
+
+    .nav_dot:hover,
+    .item_arrow:hover {
+        cursor: pointer;
+    }
+
+    .item_next,
+    .item_prev {
+        position: absolute;
+        z-index: 9999;
+        top: 40%;
+    }
+
+    .item_next {    
+        left: 96%;
+    }
+
+    .item_prev {
+    }
+
+    div[id^="text_"] {
+        display: none;
+    } 
+    .carousel_text {
+        position: absolute;
+        margin-left: 4.5%;
+        bottom:5%;
+        background-color: white;
+        z-index: 100;
+    }
+    .show_modal {
+        background-color: red;
+    //     transition: all 2s;
+    //     left:0;right:0;top:0;bottom:0;
+    //     margin: auto;
+    }
+    div[id^="modal_container_"] {
+        transition: opacity 2s;
+        position: absolute;
+        opacity: 0.6;
+        display: none;
+        background-color: pink;
+        height: 520vh;
+        width: 87vw;
+        overflow: scroll;
+        margin-left: -15px;
+        // z-index: 9999;
+    }
+
+    // .item_arrows {
+    //     position: absolute;
+    //     top: 200px;
+    //     // width: 100%;
+    //     height: 1px;
+    //     z-index: 5000;
+    //     border: 0px solid green;
+    // }
+
+    // .item_arrow {
+    //     position: absolute;
+    //     height: 65px;        
+    //     margin-bottom: 1px;
+    // }
+
+    .nav_dot:hover,
+    .item_arrow:hover {
+        cursor: pointer;
+    }
+
+    .fa {
+        color: #fff;
+        font-size: 4em;
+        margin-left: 14px;
+        margin-top: 10px;   
+    }
+
+    // .nav_dots {
+    //     position: absolute;
+    //     top: 43%;
+    //     padding-left: 1170px;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    //     // z-index: 50001;
+    //     // border: 1px solid #cc0000;
+    // }
+
+    .nav_dot{
+        // width: 8px;
+        height: 8px;
+        border: 1px solid #fff;
+        // float: left;
+        // border: 1px solid #fff;
+        background-color: #fff;
+        margin-left: 15px;  
+        border-radius: 50%; 
+        margin-bottom: 10px;   
+    }
+
+    .grab {
+        cursor: -webkit-grab;
+        cursor: -moz-grab;
+    }
+
+    .grabbing {
+         cursor: -webkit-grabbing;
+         cursor: -moz-grabbing;
+    }
+
+    #item_9 {
+        float: right;
+
     }
 }
