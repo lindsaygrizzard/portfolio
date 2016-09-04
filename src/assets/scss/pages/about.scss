@@ -1,20 +1,6 @@
-.about {
-    .job-title {
-        position: fixed;
-    }
-    .menu_container {
-        background-color: #999999;
-        height: 100vh;
-        z-index: 99999;
-    }
+.about-container {
+    width: 90vw;
+    height: 80vh;
+    margin: 10vh auto;
 
-    .content-1 {
-        height: 100vh;
-        background-color: #606060;
-    }
-
-    .content-2 {
-        height: 100vh;
-        background-color: #939393;
-    }
 }
