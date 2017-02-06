@@ -1,11 +1,10 @@
-.menu_container{
+.menu_container {
     overflow: hidden;
     height: 100vh;
     z-index: 0;
 }
 
 .job-title {
-    color: #fff;
     position: absolute;
 }
 
@@ -15,29 +14,28 @@
     width: 470px;
     margin: auto;
     position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 
     .title {
         margin-top: -30px;
         margin-left: -6px;
-        color: #fff;
     }
 
     .vertical-text {
-       transform: rotate(90deg);
-       transform-origin: right top 1;
-       float: right;
-       margin-right: -84px;
-       margin-top: -18px;
-       color: #fff;
-    }   
+        transform: rotate(90deg);
+        transform-origin: right top 1;
+        float: right;
+        margin-right: -84px;
+        margin-top: -18px;
+    }
 
     .para {
         position: absolute;
         width: 90%;
         margin-left: -3px;
         margin-top: -12px;
-        color: #fff;
     }
 }
-

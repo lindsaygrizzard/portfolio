@@ -1,16 +1,85 @@
+.carousel {
+    // background-color: grey;
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+
+    // overflow: hidden;
+
+    position: relative;
+}
+
+.slick-list {
+    width: 100%;
+    position: absolute;
+    top: 25%;
+    transform: translateY(-50%);
+}
+
+.slick-next:before {
+    content: '→';
+}
+
+.slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    color: white;
+    opacity: 0.75;
+    -webkit-font-smoothing: antialiased;
+}
+
+.slick-prev:before {
+    content: '←';
+}
+
+.slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    color: white;
+    opacity: 0.75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-next {
+    right: 0;
+}
+
+.slick-next, .slick-prev {
+    z-index: 9999;
+    position: absolute;
+    display: block;
+    height: 20px;
+    width: 20px;
+    line-height: 0;
+    font-size: 0;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    top: 50%;
+    margin-top: -10px;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
 .work-text__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     resize: vertical;
+
     // overflow: auto;
     height: 100vh;
+
     ul {
-       padding: 0;
-       list-style-type: none;
+        padding: 0;
+        list-style-type: none;
     }
 
-    .carousel_container{
+    .carousel_container {
         background-color: grey;
         resize: vertical;
         overflow: auto;
@@ -19,32 +88,35 @@
         margin-right: auto;
         width: 67vw;
         height: 78vh;
-        // overflow: hidden; 
+
+        // overflow: hidden;
         z-index: 999;
+
         @media screen and (max-width: 1050px) {
             // width: 70%;
         }
-   }
+    }
 
-   .carousel_items {
+    .carousel_items {
         background-color: pink;
         height: 75vh;
         position: relative;
         cursor: default !important;
-   }
+    }
 
-   .carousel_item {
-        float:left;
+    .carousel_item {
+        float: left;
         border: 0px solid #cc0000;
+
         .image {
             // background-color: pink;
             border: 3px solid black;
-            background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/231648/MB_CLA_1.jpg') no-repeat cover; 
+            background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/231648/MB_CLA_1.jpg') no-repeat cover;
             margin-left: -15px;
             height: 100vh;
             width: 60vw;
         }
-   }
+    }
 
     .nav_dot:hover,
     .item_arrow:hover {
@@ -58,30 +130,34 @@
         top: 40%;
     }
 
-    .item_next {    
+    .item_next {
         left: 96%;
     }
 
-    .item_prev {
+    .item_prev {}
+
+    div[id^='text_'] {
+        display: none;
     }
 
-    div[id^="text_"] {
-        display: none;
-    } 
     .carousel_text {
         position: absolute;
         margin-left: 4.5%;
-        bottom:5%;
+        bottom: 5%;
         background-color: white;
         z-index: 100;
     }
+
     .show_modal {
         background-color: red;
-    //     transition: all 2s;
-    //     left:0;right:0;top:0;bottom:0;
-    //     margin: auto;
+
+        //     transition: all 2s;
+        //     left:0;right:0;top:0;bottom:0;
+        //     margin: auto;
+   
     }
-    div[id^="modal_container_"] {
+
+    div[id^='modal_container_'] {
         transition: opacity 2s;
         position: absolute;
         opacity: 0.6;
@@ -91,7 +167,9 @@
         width: 87vw;
         overflow: scroll;
         margin-left: -15px;
+
         // z-index: 9999;
+   
     }
 
     // .item_arrows {
@@ -118,7 +196,7 @@
         color: #fff;
         font-size: 4em;
         margin-left: 14px;
-        margin-top: 10px;   
+        margin-top: 10px;
     }
 
     // .nav_dots {
@@ -131,16 +209,17 @@
     //     // border: 1px solid #cc0000;
     // }
 
-    .nav_dot{
+    .nav_dot {
         // width: 8px;
         height: 8px;
         border: 1px solid #fff;
+
         // float: left;
         // border: 1px solid #fff;
         background-color: #fff;
-        margin-left: 15px;  
-        border-radius: 50%; 
-        margin-bottom: 10px;   
+        margin-left: 15px;
+        border-radius: 50%;
+        margin-bottom: 10px;
     }
 
     .grab {
@@ -149,12 +228,11 @@
     }
 
     .grabbing {
-         cursor: -webkit-grabbing;
-         cursor: -moz-grabbing;
+        cursor: -webkit-grabbing;
+        cursor: -moz-grabbing;
     }
 
     #item_9 {
         float: right;
-
     }
 }

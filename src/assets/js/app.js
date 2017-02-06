@@ -11,6 +11,69 @@ $( document ).ready(function() {
       $('.bottom-right__corner').toggleClass('shrink-width');
   });
 
+// fix menu style jump
+  $('.menu').delay( 800 ).fadeIn( 400 );
+  console.log('test');
+
+
+  var nextUrlModule = (function(){
+
+
+    //NEXT PAGE ARROW
+    var origin = window.location.origin;
+    var currentPathName = window.location.pathname;
+
+    var index = origin + '/index.html';
+    var work = origin + '/work.html';
+    var about = origin + '/about.html';
+    var contact = origin + '/contact.html';
+
+    switch(currentPathName) {
+      case '/index.html':
+        
+        $('.nav-arrow').attr('href', work )
+
+    }
+
+  })();
+
+
+ 
+  
+
+  //carousel
+  $('.carousel').slick({
+    dots: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 4,
+    infinite: true,
+    // cssEase: 'ease',
+    // lazyLoad: 'ondemand',
+    responsive: [{
+
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            infinite: true
+          }
+
+        }, {
+
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            dots: true
+          }
+
+        }, {
+
+          breakpoint: 500,
+          settings: "unslick" // destroys slick
+
+        }]
+  });
+  
 
   ////// The following snippet was taken from a code pen created by Dean Wagman
   ////// See the original greatness at http://codepen.io/deanwagman/pen/EjLBdQ
@@ -33,11 +96,11 @@ $( document ).ready(function() {
 
   // Colors
   var colorPalette = {
-      bg: {r:98,g:197,b:182},
+      bg: {r:0,g:0,b:0},
       // bg: {r:200,g:200,b:200},
       matter: [
-        {r:118,g:206,b:193}, 
-        {r:137,g:203,b:193}
+        {r:50,g:50,b:50}, 
+        {r:100,g:100,b:100}
       ]
   };
 
