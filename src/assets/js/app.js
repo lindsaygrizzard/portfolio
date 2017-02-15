@@ -12,7 +12,7 @@ $( document ).ready(function() {
   });
 
 // fix menu style jump
-  $('.menu').delay( 800 ).fadeIn( 400 );
+  $('.menu-link').delay( 800 ).fadeIn( 400 );
   console.log('test');
 
 
@@ -38,7 +38,26 @@ $( document ).ready(function() {
   })();
 
 
- 
+ // Animate for hover
+ function animationHover(element, animation){
+     element = $(element);
+     element.hover(
+         function() {
+             element.addClass('animated ' + animation);        
+         },
+         function(){
+             //wait for animation to finish before removing classes
+             window.setTimeout( function(){
+                 element.removeClass('animated ' + animation);
+             }, 2000);         
+         });
+ }
+
+ $(document).ready(function(){
+     $('.js-bounce').each(function() {
+         animationHover(this, 'jello');
+     });
+ });
   
 
   //carousel

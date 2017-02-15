@@ -23,6 +23,13 @@
     src: url(../fonts/Tofino_Light.otf);
 }
 
+$san-serif-light: 'Tofino_Light';
+$san-serif: 'Tofino_Regular';
+$san-serif-medium: 'Tofino_Medium';
+$san-serif-bold: 'Tofino_Bold';
+
+// font styles //
+
 .title {
     color: $white;
 }
@@ -36,30 +43,26 @@
 }
 
 .job-title {
-    font-family: 'Tofino_Bold';
+    font-family: $san-serif-bold;
     text-transform: uppercase;
     font-size: 16px;
 }
 
 .vertical-text {
-    font-family: 'Tofino_Bold';
+    font-family: $san-serif-bold;
     text-transform: uppercase;
     font-size: 44px;
 }
 
 .title {
-    font-family: 'Tofino_Bold';
+    font-family: $san-serif-bold;
     text-transform: uppercase;
-    font-size: 86px;
-    letter-spacing: 5px;
 }
 
 .para {
-    font-family: 'Tofino_Bold';
-    font-size: 22px;
+    font-family: $san-serif;
 }
 
 .nav-link {
-    font-family: 'Tofino_Bold';
-    font-size: 20px;
+    font-family: $san-serif-bold;
 }

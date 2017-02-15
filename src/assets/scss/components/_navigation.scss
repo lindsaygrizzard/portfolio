@@ -2,11 +2,12 @@
     background-color: #000;
 }
 
-.job-title {
+.lg-icon {
     color: #fff;
     position: absolute;
     top: 40px;
     left: 40px;
+    width: 50px;
 
     a {
         color: #fff;
@@ -69,14 +70,6 @@
     }
 }
 
-.menu {
-    position: fixed;
-    right: 190px;
-    top: 25px;
-    color: #fff;
-    display: none;
-}
-
 .top-left__corner,
 .bottom-right__corner {
     position: fixed;
@@ -108,6 +101,15 @@
     height: 190px;
 }
 
+.menu-link {
+    position: fixed;
+    right: 176px;
+    top: 25px;
+    color: #fff;
+    display: none;
+    font-size: 20px;
+}
+
 //icon links
 .icons {
     position: fixed;
@@ -131,14 +133,6 @@
     width: 110px;
 }
 
-.nav-arrow {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 50px;
-    background-color: yellow;
-}
-
 //bottom menu on homepage
 .home-menu {
     position: fixed;
@@ -159,6 +153,7 @@
         opacity: 0;
         float: left;
         margin-right: 15px;
+        font-size: 20px;
     }
 
     .show {

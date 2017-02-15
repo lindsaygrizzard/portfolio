@@ -1,6 +1,36 @@
 .about-container {
+    position: relative;
     width: 90vw;
     height: 80vh;
     margin: 10vh auto;
+}
 
+.about-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+
+    &__primary {
+        float: left;
+    }
+}
+
+.about--title {
+    color: $white;
+    font-family: $san-serif-medium;
+    font-size: 24px;
+    color: #ddd;
+
+    .bold {
+        display: inline-block;
+        font-family: $san-serif-bold;
+        font-size: 28px;
+        color: $white;
+    }
+}
+
+.about--para {
+    color: $white;
 }
