@@ -243,28 +243,6 @@ $( document ).ready(function() {
   // First particle explosion
   initParticles(config.particleNumber);
 
-  //////// End of particles in space! ////////
-
-
-  /// AJAX PAGE LOAD //////
-  // $(".home-link").click(function(){
-  //     $( ".content-wrapper" ).load( "/index.html" );
-  // });
-
-  // $(".work-link").click(function(){
-  //     $( ".content-wrapper" ).load( "/work.html" );
-  // });
-
-  // $(".about-link").click(function(){
-  //     $( ".content-wrapper" ).load( "/about.html" );
-  // });
-
-  // $(".contact-link").click(function(){
-  //     $( ".content-wrapper" ).load( "/contact.html" );
-  // });
-
-  ///////// TO DO: Replace above with REACT //////////////
-
 
 
   ////////////// start carousel ///////////////////

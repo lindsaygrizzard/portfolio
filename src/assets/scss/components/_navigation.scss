@@ -8,6 +8,7 @@
     top: 40px;
     left: 40px;
     width: 50px;
+    z-index: 999;
 
     a {
         color: #fff;
@@ -115,10 +116,12 @@
     position: fixed;
     right: 24px;
     top: 255px;
+    z-index: 99;
 
     .icon-link {
         opacity: 0;
-        margin-bottom: 20px;
+        display: block;
+        margin-bottom: 30px;
         transition: opacity 250ms ease-in-out;
     }
 
@@ -126,6 +129,10 @@
         opacity: 1;
         animation-delay: .3s;
         transition-delay: .3s;
+    }
+
+    a {
+        z-index: 999;
     }
 }
 

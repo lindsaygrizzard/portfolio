@@ -1,12 +1,19 @@
 .carousel {
-    // background-color: grey;
+    background-color: grey;
+    z-index: 9999;
     width: 70%;
     height: 100%;
-    margin: 0 auto;
 
-    // overflow: hidden;
+    // margin: 0 auto;
 
-    position: relative;
+    // // overflow: hidden;
+
+    // position: relative;
+}
+
+.work-slide {
+    z-index: 9999;
+    background-color: red;
 }
 
 .slick-list {
