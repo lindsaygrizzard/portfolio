@@ -22,7 +22,7 @@
 //HAMBURGER
 #nav-toggle {
     position: fixed;
-    right: 128px;
+    right: 138px;
     top: 30px;
     z-index: 9999;
     cursor: pointer;
@@ -45,7 +45,7 @@
     span:after {
         cursor: pointer;
         border-radius: 1px;
-        height: 5px;
+        height: 3px;
         width: 35px;
         background: white;
         position: absolute;
@@ -76,10 +76,8 @@
     position: fixed;
     width: 90px;
     height: 275px;
-    border: 5px solid #fff;
+    border: 3px solid #fff;
     transition: all 300ms ease-in-out;
-
-    // transition: width 300ms ease-in-out;
 }
 
 .top-left__corner {
@@ -104,11 +102,11 @@
 
 .menu-link {
     position: fixed;
-    right: 176px;
-    top: 25px;
+    right: 190px;
+    top: 28px;
     color: #fff;
     display: none;
-    font-size: 20px;
+    font-size: 14px;
 }
 
 //icon links
@@ -117,6 +115,7 @@
     right: 24px;
     top: 255px;
     z-index: 99;
+    width: 35px;
 
     .icon-link {
         opacity: 0;
@@ -150,8 +149,6 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
-
-        // overflow: hidden;
    
     }
 
@@ -160,7 +157,7 @@
         opacity: 0;
         float: left;
         margin-right: 15px;
-        font-size: 20px;
+        font-size: 14px;
     }
 
     .show {

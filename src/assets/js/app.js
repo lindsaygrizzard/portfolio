@@ -60,39 +60,21 @@ $( document ).ready(function() {
  });
   
 
-  //carousel
-  $('.carousel').slick({
-    dots: false,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    initialSlide: 4,
-    infinite: true,
-    // cssEase: 'ease',
-    // lazyLoad: 'ondemand',
-    responsive: [{
+//////SLICK SLIDER 
 
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 2,
-            infinite: true
-          }
+// Basic initialization is like this:
+// $('.your-class').slick();
 
-        }, {
-
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1,
-            dots: true
-          }
-
-        }, {
-
-          breakpoint: 500,
-          settings: "unslick" // destroys slick
-
-        }]
-  });
-  
+// I added some other properties to customize my slider
+// Play around with the numbers and stuff to see
+// how it works.
+$('.slick-carousel').slick({
+  infinite: true,
+  slidesToShow: 1, // Shows a three slides at a time
+  slidesToScroll: 1, // When you click an arrow, it scrolls 1 slide at a time
+  arrows: true, // Adds arrows to sides of slider
+  dots: false // Adds the dots on the bottom
+});
 
   ////// The following snippet was taken from a code pen created by Dean Wagman
   ////// See the original greatness at http://codepen.io/deanwagman/pen/EjLBdQ
@@ -504,6 +486,44 @@ $( document ).ready(function() {
            setTimeout(loops, 10);
        }
    })();
+
+
+///work slide hover
+
+var randColorArray =['cb7330', '9b5424', 'c46220', '5bbfa0', '50a086', '10596B','a0c24e', '90a843'];
+
+var blueColorArray =['6EBECE', '04738A', '10596B', '0E5767', '3D9FBE','047080', '0C638B', '106068', '1A737C', '57B9CF', '0B526C', '0F7F8A', '0B8898', '208899', '279AA6', '2A9AA6','1C8E78'];
+
+    function randomFillColor(){
+      var fillColor = randColorArray[Math.floor(Math.random() * randColorArray.length)+1];
+      return fillColor;
+    };
+
+    function blueFillColor(){
+      var fillColor = blueColorArray[Math.floor(Math.random() * blueColorArray.length)+1];
+      return fillColor;
+    };
+
+    function randBlueTimer() {
+        var $shape = $(".shape").eq([Math.floor(Math.random()*($(".shape").length))])
+        //hover color changes not affected by random color changes
+        if (!$( $shape[0] ).hasClass( "more-opacity" )) {
+            $shape.css('fill', '#'+blueFillColor());
+        }
+        setTimeout(randBlueTimer, 50);            
+    }
+    randBlueTimer();
+
+    // Changes to bright full-opacity colors and fades back to blue family colors//
+    $(".shape").hover(function(){
+      $(this).css('fill', '#'+randomFillColor());
+      $(this).addClass("more-opacity").delay(1300).queue(function(next){
+          $(this).removeClass("more-opacity");
+          next();
+         $(this).css('fill', '#'+blueFillColor());
+        next();
+      });
+    })
 
 
 });
