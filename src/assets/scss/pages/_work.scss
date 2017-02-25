@@ -9,8 +9,8 @@
   left: 50%;
   transform: translate(-50%,-50%);
   margin: 0 auto;
-  width: 90vw;
-  height: 80vh;
+  width: 86vw;
+  height: 76vh;
   @media (max-width: $mq-small) {
       width: 70vw;
   }
@@ -25,9 +25,7 @@
   display: block;
   overflow: hidden;
   margin-top: -50px;
-  // margin-left: 205px;
-  // margin: -150px auto 0 ;
-  // height: 80vh;
+
 }
 
 .shape{
@@ -44,12 +42,12 @@
 .work {
     &-image-container {
         overflow: hidden;
-        height: 80vh;
+        height: 76vh;
         background: black;
     }
 
     &-text-container {
-        margin-top: 5%;
+        margin-top: 7%;
     }
 
     &-slide {
@@ -58,12 +56,13 @@
     }
 
     &-content {
-        margin: 13% auto 0;
+        margin: 5% auto 0;
         color: black;
         width: 65%;
     }
 
     &-sub-header {
+        margin-bottom: 0;
         font-size: 12px;
         font-family: $san-serif-medium;
         text-transform: uppercase;
@@ -84,14 +83,14 @@
 
     &-descr{
         font-size: 14px;
-        margin-top: 5%;
+        margin-top: 6%;
         width: 65%;
         color: black;
     }
 
     &-button {
         font-size: 14px;
-        margin-top: 5%;
+        margin-top: 10%;
         
         a {
             padding: 10px 25px;
@@ -100,6 +99,11 @@
             font-family: $san-serif-bold;
             text-transform: uppercase;
             border: 1px solid black;
+            transition: all .5s;
+            &:hover {
+                background-color: black;
+                color: white;
+            }
             
         }
     }
