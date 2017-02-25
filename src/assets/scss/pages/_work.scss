@@ -11,14 +11,13 @@
   margin: 0 auto;
   width: 90vw;
   height: 80vh;
-  background-color: #444;
+  @media (max-width: $mq-small) {
+      width: 70vw;
+  }
+  
 }
 
-.work-image-container {
-    overflow: hidden;
-    height: 80vh;
-    background: #222;
-}
+
 
 ///vonnda Slide
 #vonnda_svg {
@@ -29,11 +28,8 @@
   // margin-left: 205px;
   // margin: -150px auto 0 ;
   // height: 80vh;
-  @media(max-width: 1600px){
-    // width: 100%;
-    // height: 140vh;
-  }
 }
+
 .shape{
    transition: all .7s linear;
    -webkit-transition:  all .7s linear;
@@ -44,56 +40,70 @@
   opacity: .8;
 }
 
-.work-slide {
-    z-index: 9999;
-}
 
-.work-content {
-   margin: 13% auto 0;
-   margin-left: -225px;
-   color: white;
-   width: 65%;
-}
-
-.work-sub-header {
-    font-size: 12px;
-    font-family: $san-serif-medium;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-align: center;
-}
-
-.work-title {
-    font-family: $san-serif-bold;
-    font-size: 56px;
-    text-align: center;
-}
-
-.work-divider {
-    width: 65%;
-    height: 2px;
-    margin: 15% auto 0;
-    background-color: white;
-}
-
-.work-descr{
-    font-size: 14px;
-    margin: 5% auto 0;
-    width: 65%;
-    color: white;
-}
-
-.work-button {
-    font-size: 14px;
-    margin: 12% auto 0;
-    width: 65%;
-    text-align: right;
-    a {
-        font-size: 12px;
-        color: white; 
-        font-family: $san-serif-bold;
-        text-transform: uppercase;
+.work {
+    &-image-container {
+        overflow: hidden;
+        height: 80vh;
+        background: black;
     }
+
+    &-text-container {
+        margin-top: 5%;
+    }
+
+    &-slide {
+        z-index: 9999;
+        background-color: white;
+    }
+
+    &-content {
+        margin: 13% auto 0;
+        color: black;
+        width: 65%;
+    }
+
+    &-sub-header {
+        font-size: 12px;
+        font-family: $san-serif-medium;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    &-title {
+        font-family: $san-serif-bold;
+        font-size: 56px;
+    }
+
+    &-divider {
+        width: 5%;
+        height: 2px;
+        margin-top: 5%;
+        background-color: black;
+    }
+
+    &-descr{
+        font-size: 14px;
+        margin-top: 5%;
+        width: 65%;
+        color: black;
+    }
+
+    &-button {
+        font-size: 14px;
+        margin-top: 5%;
+        
+        a {
+            padding: 10px 25px;
+            font-size: 12px;
+            color: black; 
+            font-family: $san-serif-bold;
+            text-transform: uppercase;
+            border: 1px solid black;
+            
+        }
+    }
+
 }
 
 .slick-next:before {
