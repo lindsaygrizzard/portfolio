@@ -525,5 +525,22 @@ var blueColorArray =['6EBECE', '04738A', '10596B', '0E5767', '3D9FBE','047080', 
       });
     })
 
+    /// Image 500 friends
+    (function() {
+
+        var quotes = $(".work-word");
+        var quoteIndex = 1;
+        
+        function showNextQuote() {
+            ++quoteIndex;
+            quotes.eq(quoteIndex % quotes.length)
+                .fadeIn(2000)
+                .delay(2000)
+                .fadeOut(2000, showNextQuote);
+        }
+        
+        showNextQuote();
+        
+    })();
 
 });

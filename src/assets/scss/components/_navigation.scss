@@ -45,7 +45,7 @@
     span:after {
         cursor: pointer;
         border-radius: 1px;
-        height: 3px;
+        height: 4px;
         width: 35px;
         background: white;
         position: absolute;
@@ -76,7 +76,7 @@
     position: fixed;
     width: 90px;
     height: 275px;
-    border: 3px solid #fff;
+    border: 4px solid #fff;
     transition: all 300ms ease-in-out;
 }
 
@@ -103,10 +103,11 @@
 .menu-link {
     position: fixed;
     right: 190px;
-    top: 28px;
+    top: 30px;
     color: #fff;
     display: none;
     font-size: 14px;
+    text-transform: uppercase;
 }
 
 //icon links
@@ -140,9 +141,9 @@
 }
 
 //bottom menu on homepage
-.home-menu {
+.menu {
     position: fixed;
-    bottom: 12px;
+    bottom: 15px;
     left: 180px;
 
     ul {
@@ -157,6 +158,7 @@
         float: left;
         margin-right: 15px;
         font-size: 14px;
+        text-transform: uppercase;
     }
 
     .show {
