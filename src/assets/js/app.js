@@ -7,8 +7,10 @@ $( document ).ready(function() {
       this.classList.toggle( "active" );
       $('.nav-link').toggleClass('show');
       $('.icon-link').toggleClass('show');    
-      $('.top-left__corner').toggleClass('shrink-height');
-      $('.bottom-right__corner').toggleClass('shrink-width');
+      $('.top-right__corner').toggleClass('shrink-height');
+      $('.bottom-left__corner').toggleClass('shrink-width');
+      $('.bottom-right__corner').toggleClass('shrink-height-br');
+      $('.bottom-right__corner').toggleClass('shrink-width-br');
   });
 
 // fix menu style jump
