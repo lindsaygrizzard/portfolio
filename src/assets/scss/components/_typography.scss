@@ -23,10 +23,20 @@
     src: url(../fonts/Tofino_Light.otf);
 }
 
-$san-serif-light: 'Tofino_Light';
-$san-serif: 'Tofino_Regular';
-$san-serif-medium: 'Tofino_Medium';
-$san-serif-bold: 'Tofino_Bold';
+@font-face {
+    font-family: 'Quaver_Sans';
+    src: url(../fonts/QuaverSans.otf);
+}
+
+@font-face {
+    font-family: 'Quaver_Serif';
+    src: url(../fonts/QuaverSerif.otf);
+}
+
+$san-serif-light: 'Quaver_Sans';
+$san-serif: 'Quaver_Sans';
+$san-serif-medium: 'Quaver_Serif';
+$san-serif-bold: 'Quaver_Serif';
 
 // font styles //
 
