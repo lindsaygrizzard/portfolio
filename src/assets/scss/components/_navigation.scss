@@ -22,7 +22,7 @@
 //HAMBURGER
 #nav-toggle {
     position: fixed;
-    right: 138px;
+    right: 28px;
     top: 30px;
     z-index: 9999;
     cursor: pointer;
@@ -71,71 +71,132 @@
     }
 }
 
-.top-right__corner,
-.bottom-left__corner,
-.top-center,
-.bottom-right__corner {
+.top-center__line {
     position: fixed;
-    transition: all 300ms ease-in-out;
+    top: 45px;
+    left: 10vw;
+    width: 80vw;
+    height: 2px;
+    background-color: green;
+
 }
 
-.top-center {
-    top: 6.5%;
-    left: 10%;
-    width: 70%;
-    height: 60%;
-    border-top: 1px solid #333;
-}
-
-.top-right__corner {
-    width: 5%;
-    height: 60%;
-    top: 6.5%;
-    right: 3%;
-    border: 1px solid #333;
-    border-bottom: none;
-    border-left: none;
-}
-
-.bottom-left__corner {
-    border: 1px solid #333;
-    border-top: none;
-    border-right: none;
-    bottom: 7%;
-    left: 3%;
-    vertical-align: bottom;
-    width: 40%;
-    height: 76%;
-}
-
-.bottom-right__corner {
+.right__line--top {
     position: fixed;
-    right: 3%;
-    bottom: 7%;
-    height: 30%;
-    width: 60%;
-    border: 1px solid #333;
-    border-top: none;
-    border-left: none;
+    top: 10vh;
+    right: 45px;
+    height: 40vh;
+    width: 2px;
+    background-color: green;
 }
 
-.shrink-height {
-    height: 190px;
-}
-.shrink-width {
-    width: 110px;
+.right__line--bottom{
+    position: fixed;
+    bottom: 10vh;
+    right: 45px;
+    height: 40vh;
+    width: 2px;
+    background-color: green;
 }
 
-.shrink-height-br {
-    height: 16%;
+
+.bottom-center__line--left {
+    position: fixed;
+    bottom: 45px;
+    left: 10vw;
+    width: 30vw;
+    height: 2px;
+    background-color: green;
+
 }
-.shrink-width-br {
-    width: 52%;
+
+.bottom-center__line--right {
+    position: fixed;
+    bottom: 45px;
+    right: 10vw;
+    width: 30vw;
+    height: 2px;
+    background-color: green;
+
 }
+
+.left__line {
+    position: fixed;
+    top: 10vh;
+    left: 45px;
+    height: 90vh;
+    width: 2px;
+    background-color: green;
+}
+
+
+
+// .top-right__corner,
+// .bottom-left__corner,
+// .top-center,
+// .bottom-right__corner {
+//     position: fixed;
+//     transition: all 300ms ease-in-out;
+// }
+
+// .top-center {
+//     top: 38px;
+//     left: 10%;
+//     width: 70%;
+//     height: 1%;
+//     z-index: 100;
+//     border-top: 2px solid #333;
+// }
+
+// .top-right__corner {
+//     width: 5%;
+//     height: 350px;
+//     top: 38px;
+//     right: 45px;
+//     border: 2px solid #333;
+//     border-bottom: none;
+//     border-left: none;
+// }
+
+// .bottom-left__corner {
+//     border: 2px solid #333;
+//     border-top: none;
+//     border-right: none;
+//     bottom: 7%;
+//     left: 45px;
+//     vertical-align: bottom;
+//     width: 300px;
+//     height: 200px;
+// }
+
+// .bottom-right__corner {
+//     position: fixed;
+//     right: 3%;
+//     bottom: 7%;
+//     height: 30px;
+//     width: 40%;
+//     border: 2px solid #333;
+//     border-top: none;
+//     border-left: none;
+// }
+
+// .shrink-height {
+//     height: 190px;
+// }
+// .shrink-width {
+//     width: 110px;
+// }
+
+// .shrink-height-br {
+//     height: 130px;
+// }
+// .shrink-width-br {
+//     width: 300px;
+// }
 
 .menu-link {
     position: fixed;
-    right: 190px;
+    right: 83px;
     top: 30px;
     color: #fff;
     display: none;
@@ -165,7 +226,7 @@
     }
 
     a {
-        z-index: 999;
+        z-index: 99999 !important;
     }
 }
 

@@ -6,8 +6,8 @@
 
 .primary-text__container {
     display: block;
-    height: 219px;
-    width: 470px;
+    height: 180px;
+    width: 370px;
     margin: auto;
     position: absolute;
     top: 0;
@@ -23,10 +23,13 @@
     }
 
     .title {
-        margin-top: -30px;
+        margin-top: 0px;
         margin-left: -6px;
-        font-size: 80px;
-        letter-spacing: 5px;
+        margin-bottom: 0;
+        color: $light-grey;
+        font-size: 64px;
+        letter-spacing: 10px;
+        font-family: $quaver-serif;
 
         @media (max-width: $mq-small) {
             font-size: 40px;
@@ -39,9 +42,12 @@
         transform: rotate(90deg);
         transform-origin: right top 1;
         float: right;
-        margin-right: -76px;
-        margin-top: -15px;
-        font-size: 45px;
+        margin-right: -40px;
+        margin-top: -13px;
+        font-size: 28px;
+        color: $light-grey;
+        font-family: $quaver-serif;
+        letter-spacing: 5px;
 
         @media (max-width: $mq-small) {
             transform: rotate(0deg);
@@ -57,12 +63,14 @@
 
     .para {
         position: absolute;
-        width: 90%;
+        width: 86%;
         margin-left: -3px;
-        margin-top: -12px;
-        font-family: $san-serif-bold;
-        font-size: 1.28em;
+        margin-top: -22px;
+        font-family: $san-serif;
+        font-size: 16px;
         line-height: 1.8;
+        letter-spacing: 0.6px;
+
 
         @media (max-width: $mq-small) {
             width: 90%;
