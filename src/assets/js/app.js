@@ -8,9 +8,29 @@ $( document ).ready(function() {
       $('.nav-link').toggleClass('show');
       $('.icon-link').toggleClass('show');    
       $('.right__line--top').toggleClass('collapse');
-      $('.right__line--bottom ').toggleClass('collapse');
+      $('.right__line--bottom ').toggleClass('expand');
       $('.bottom-center__line--left').toggleClass('collapse');
       $('.bottom-center__line--right').toggleClass('expand');
+
+      //dynamically adjust show hide menu lines
+      if ($('.bottom-center__line--right').hasClass('expand')) {
+          var offsetWidth = $('.menu').width() + 190;
+          var expandWidth = window.innerWidth - offsetWidth;
+          $('.bottom-center__line--right').css('width', expandWidth+'px');
+      } else {
+          $('.bottom-center__line--right').css('width', '50vw');
+      }
+
+      if ($('.right__line--bottom').hasClass('expand')) {
+        console.log('expand');
+          var offsetHeight = $('.icons').height() + 295;
+          var expandHeight = window.innerHeight - offsetHeight;
+          $('.right__line--bottom').css('height', expandHeight+'px');
+      } else {
+          $('.right__line--bottom').css('height', '30vh');
+      }
+
+      
   });
 
 
