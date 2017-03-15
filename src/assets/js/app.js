@@ -7,11 +7,15 @@ $( document ).ready(function() {
       this.classList.toggle( "active" );
       $('.nav-link').toggleClass('show');
       $('.icon-link').toggleClass('show');    
-      $('.top-right__corner').toggleClass('shrink-height');
-      $('.bottom-left__corner').toggleClass('shrink-width');
-      $('.bottom-right__corner').toggleClass('shrink-height-br');
-      $('.bottom-right__corner').toggleClass('shrink-width-br');
+      $('.right__line--top').toggleClass('collapse');
+      $('.right__line--bottom ').toggleClass('collapse');
+      $('.bottom-center__line--left').toggleClass('collapse');
+      $('.bottom-center__line--right').toggleClass('expand');
   });
+
+
+  
+
 
 // fix menu style jump
   $('.menu-link').delay( 800 ).fadeIn( 400 );
