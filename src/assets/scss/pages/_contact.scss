@@ -2,6 +2,7 @@
     .job-title {
         position: fixed;
     }
+
     .menu_container {
         background-color: grey;
         height: 100vh;
@@ -16,5 +17,33 @@
     .content-2 {
         height: 100vh;
         background-color: #606060;
+    }
+}
+
+.contact_wapper {
+    padding-left: 25px;
+
+    .title {
+        letter-spacing: 5px;
+
+        // color: $white;
+   
+    }
+
+    .para {
+        font-family: $san-serif;
+        font-size: 16px;
+        line-height: 1.8;
+        letter-spacing: 0.6px;
+        color: $light-grey;
+    }
+
+    a {
+        color: $white;
+        transition: color .5s;
+
+        &:hover {
+            color: #50C3C5;
+        }
     }
 }
