@@ -4,22 +4,50 @@
     height: 80vh;
     margin: 10vh auto;
     text-align: center;
+   
+}
+.about-header {
+    height: 100%;
+    position: relative;
+
+}
+
+
+.about-image {
+    position: absolute;
+    bottom: -12%;
+    right: 1%;
+    width: 50vw;
+    opacity: .45;
+    transition: opacity 2s;
+
+    &:hover {
+        opacity: .65;
+    }
+    @media (max-width: $mq-small) {
+        display: none;
+    }
 }
 
 .about-content {
-    // position: absolute;
-    // top: 40%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-
     &__primary {
         float: left;
     }
 
     &__secondary {
-        width: 726px;
+        width: 50vw;
         margin-left: 34%;
-        margin-top: 17px;
+        margin-top: 80px;
+        float: right;
+        @media (max-width: $mq-med) {
+            width: 60%;
+            margin-left: 10%;
+        }
+
+        @media (max-width: $mq-small) {
+            width: 83%;
+            margin: 3px 7%;
+        }
     }
 }
 
@@ -35,6 +63,11 @@
     color: #ddd;
     letter-spacing: 4px;
     line-height: 1.3;
+    @media (max-width: $mq-small) {
+        left: 20%;
+        font-size: 30px;
+        top: 10%;
+    }
 
     .bold {
         display: inline-block;
@@ -42,45 +75,43 @@
         font-size: 46px;
         color: $white;
         letter-spacing: 2px;
+        @media (max-width: $mq-small) {
+            left: 11%;
+            font-size: 38px;
+        }
     }
 }
 
 .about--para {
+    font-size: 22px;
     color: $white;
     text-align: left;
-}
-
-.about-image {
-    position: absolute;
-    bottom: -10%;
-
-    // height: 88vh;
-    width: 65vw;
-
-    // padding-left: 20%;
-    opacity: .35;
-    transition: opacity 2s;
-
-    &:hover {
-        opacity: .65;
-    }
+    font-family: $quaver-san-serif;
 }
 
 .see-more {
     &__container {
         text-align: left;
         clear: both;
-        margin-left: 15.5%;
-        margin-top: 55px;
-        margin-bottom: 55px;
         color: $white;
         z-index: 99999;
+        width: 50vw;
+        margin-left: 34%;
+        margin-top: 0px;
+        margin-bottom: 80px;
+        float: right;
+
     }
 
     &__title h5 {
+        color: $white;
+        padding-top: 50px;
         margin-bottom: -5px;
         font-family: $quaver-serif;
         font-size: 42px;
+        &:hover {
+            color: #50C3C5;
+        }
     }
 
     &__para {
@@ -103,5 +134,9 @@
         font-family: $quaver-san-serif;
         font-size: 20px;
         color: $white;
+        &:hover {
+            color: #50C3C5;
+        }
+
     }
 }
