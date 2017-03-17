@@ -514,59 +514,59 @@ $('.slick-carousel').slick({
    })();
 
 
-///work slide hover
+  ///work slide hover
 
-var randColorArray =['cb7330', '9b5424', 'c46220', '5bbfa0', '50a086', '10596B','a0c24e', '90a843'];
+  var randColorArray =['cb7330', '9b5424', 'c46220', '5bbfa0', '50a086', '10596B','a0c24e', '90a843'];
 
-var blueColorArray =['6EBECE', '04738A', '10596B', '0E5767', '3D9FBE','047080', '0C638B', '106068', '1A737C', '57B9CF', '0B526C', '0F7F8A', '0B8898', '208899', '279AA6', '2A9AA6','1C8E78'];
+  var blueColorArray =['111', '222', '333', '444', '555','666', '777', '8888', '999', 'aaa', 'bbb', 'ccc', 'ddd'];
 
-    function randomFillColor(){
-      var fillColor = randColorArray[Math.floor(Math.random() * randColorArray.length)+1];
-      return fillColor;
-    };
+  function randomFillColor(){
+    var fillColor = randColorArray[Math.floor(Math.random() * randColorArray.length)+1];
+    return fillColor;
+  };
 
-    function blueFillColor(){
-      var fillColor = blueColorArray[Math.floor(Math.random() * blueColorArray.length)+1];
-      return fillColor;
-    };
+  function blueFillColor(){
+    var fillColor = blueColorArray[Math.floor(Math.random() * blueColorArray.length)+1];
+    return fillColor;
+  };
 
-    function randBlueTimer() {
-        var $shape = $(".shape").eq([Math.floor(Math.random()*($(".shape").length))])
-        //hover color changes not affected by random color changes
-        if (!$( $shape[0] ).hasClass( "more-opacity" )) {
-            $shape.css('fill', '#'+blueFillColor());
-        }
-        setTimeout(randBlueTimer, 50);            
-    }
-    randBlueTimer();
+  function randBlueTimer() {
+      var $shape = $(".shape").eq([Math.floor(Math.random()*($(".shape").length))])
+      //hover color changes not affected by random color changes
+      if (!$( $shape[0] ).hasClass( "more-opacity" )) {
+          $shape.css('fill', '#'+blueFillColor());
+      }
+      setTimeout(randBlueTimer, 50);            
+  }
+  randBlueTimer();
 
-    // Changes to bright full-opacity colors and fades back to blue family colors//
-    $(".shape").hover(function(){
-      $(this).css('fill', '#'+randomFillColor());
-      $(this).addClass("more-opacity").delay(1300).queue(function(next){
-          $(this).removeClass("more-opacity");
-          next();
-         $(this).css('fill', '#'+blueFillColor());
+  // Changes to bright full-opacity colors and fades back to blue family colors//
+  $(".shape").hover(function(){
+    $(this).css('fill', '#'+randomFillColor());
+    $(this).addClass("more-opacity").delay(1300).queue(function(next){
+        $(this).removeClass("more-opacity");
         next();
-      });
-    })
+       $(this).css('fill', '#'+blueFillColor());
+      next();
+    });
+  });
 
-    /// Image 500 friends
-    (function() {
+  /// Image 500 friends
+  // (function() {
 
-        var quotes = $(".work-word");
-        var quoteIndex = 1;
-        
-        function showNextQuote() {
-            ++quoteIndex;
-            quotes.eq(quoteIndex % quotes.length)
-                .fadeIn(2000)
-                .delay(2000)
-                .fadeOut(2000, showNextQuote);
-        }
-        
-        showNextQuote();
-        
-    })();
+  //     var quotes = $(".work-word");
+  //     var quoteIndex = 1;
+      
+  //     function showNextQuote() {
+  //         ++quoteIndex;
+  //         quotes.eq(quoteIndex % quotes.length)
+  //             .fadeIn(2000)
+  //             .delay(2000)
+  //             .fadeOut(2000, showNextQuote);
+  //     }
+      
+  //     showNextQuote();
+      
+  // })();
 
 });
