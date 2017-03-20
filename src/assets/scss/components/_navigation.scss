@@ -3,7 +3,7 @@
 }
 
 .lg-icon {
-    color: #fff;
+    color: #ddd;
     position: fixed;
     top: 20px;
     left: 30px;
@@ -11,7 +11,7 @@
     z-index: 999;
 
     a {
-        color: #fff;
+        color: #ddd;
 
         &:hover {
             color: #EAE5E1;
@@ -47,7 +47,7 @@
         border-radius: 1px;
         height: 4px;
         width: 35px;
-        background: white;
+        background: #ddd;
         position: absolute;
         display: block;
         content: '';
@@ -156,7 +156,7 @@
     position: fixed;
     right: 83px;
     top: 30px;
-    color: #fff;
+    color: #ddd;
     display: none;
     font-size: 14px;
     text-transform: uppercase;
@@ -253,7 +253,7 @@
     }
 
     .nav-link a {
-        color: #fff;
+        color: #ddd;
         display: block;
         text-align: center;
         padding: 16px;
