@@ -76,7 +76,8 @@
     color: $white;
     text-align: left;
     font-family: $quaver-san-serif;
-    font-size: 34px;
+    font-size: 30px;
+    font-weight: bold;
     color: #ddd;
     letter-spacing: 4px;
     line-height: 1.3;
@@ -89,7 +90,7 @@
     .bold {
         display: inline-block;
         font-family: $quaver-serif;
-        font-size: 46px;
+        font-size: 40px;
         color: $white;
         letter-spacing: 2px;
         @media (max-width: $mq-small) {

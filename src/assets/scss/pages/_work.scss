@@ -33,6 +33,75 @@
         font-size: 65px;
         text-transform: uppercase;
         letter-spacing: 5px;
+        margin-bottom: -20px;
+    }
+
+    &-slide-number {
+        font-size: 40px;
+        font-weight: lighter;
+    }
+
+    &-slide-intro {
+        width: 400px;
+        margin: 20% auto 0;
+        color: white;
+        text-align: center;
+    }
+
+    &-primary-title{
+        font-size: 45px;
+    }
+
+    &-primary-para {
+        text-align: center;
+        font-size: 20px;
+        font-family: $quaver-san-serif;
+    }
+
+    &-button {
+        display: inline-block;
+        padding: 2px 20px 0;
+        border: 1px solid #aaa;
+        font-size: 20px;
+        font-family: $quaver-san-serif;
+        text-transform: uppercase;
+        transition: all .2s linear;
+        &:hover {
+            background-color: white;
+            a {
+                color: black;
+            }
+        }
+
+        a {
+            color: white;
+            // font-weight: bold;
+        }
+    }
+
+    &-slide-secondary{
+        background-color: white;
+        margin: 100px auto 0;
+    }
+
+    &-slide-secondary-intro{
+        width: 75%;
+        margin: 0 auto;
+        padding: 75px 0;
+        color: black;
+        text-align: left;
+    }
+
+    &-secondary-title {
+        font-size: 45px;
+
+    }
+
+    &-secondary-para {
+         color: black;
+         font-family: $quaver-san-serif;
+         font-size: 20px;
+
     }
 
 }
@@ -172,7 +241,7 @@
     cursor: pointer;
     background: transparent;
     color: transparent;
-    top: 50%;
+    top: 27%;
     margin-top: -10px;
     padding: 0;
     border: none;
