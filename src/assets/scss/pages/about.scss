@@ -4,8 +4,8 @@
     height: 80vh;
     margin: 10vh auto;
     text-align: center;
-   
 }
+
 .about-header {
     height: 100%;
     position: relative;
@@ -17,11 +17,18 @@
     right: -140px;
     position: absolute;
     top: -66px;
+
     svg {
         height: 116vh;
         right: -4%;
         top: -100px;
         position: absolute;
+
+        @media (max-width: $mq-xlarge) {
+            right: -8%;
+            top: -200px;
+        }
+
         @media (max-width: $mq-small) {
             display: none;
         }
@@ -32,15 +39,26 @@
     position: absolute;
     bottom: -12%;
     right: 1%;
-    width: 50vw;
+    width: 55%;
     opacity: .4;
     transition: opacity 2s;
-    -webkit-transition:  all 2s linear;
-    -moz-transition:  all 2s  linear;
+    -webkit-transition: all 2s linear;
+    -moz-transition: all 2s  linear;
 
     &:hover {
         opacity: .65;
     }
+
+    @media (max-width: $mq-xlarge) {
+        width: 65%;
+        right: -5%;
+    }
+
+    @media (max-width: $mq-med) {
+        min-width: 100%;
+        right: -20%;
+    }
+
     @media (max-width: $mq-small) {
         display: none;
     }
@@ -52,10 +70,11 @@
     }
 
     &__secondary {
-        width: 50vw;
+        width: 50%;
         margin-left: 34%;
-        margin-top: 80px;
+        margin-top: 175px;
         float: right;
+
         @media (max-width: $mq-med) {
             width: 60%;
             margin-left: 10%;
@@ -81,6 +100,7 @@
     color: #ddd;
     letter-spacing: 4px;
     line-height: 1.3;
+
     @media (max-width: $mq-small) {
         left: 15%;
         font-size: 30px;
@@ -93,6 +113,7 @@
         font-size: 40px;
         color: $white;
         letter-spacing: 2px;
+
         @media (max-width: $mq-small) {
             left: 11%;
             font-size: 38px;
@@ -105,66 +126,4 @@
     color: $white;
     text-align: left;
     font-family: $quaver-san-serif;
-}
-
-.see-more {
-    &__container {
-        text-align: left;
-        clear: both;
-        color: $white;
-        z-index: 99999;
-        width: 50vw;
-        margin-left: 34%;
-        margin-top: 0px;
-        margin-bottom: 80px;
-        float: right;
-        @media (max-width: $mq-small) {
-            margin-left: 11%;
-            float: left;
-            width: 82%;
-        }
-    }
-
-    &__title h5 {
-        color: $white;
-        padding-top: 50px;
-        margin-bottom: -5px;
-        font-family: $quaver-serif;
-        font-size: 42px;
-        transition: all .2s linear;
-        -webkit-transition:  all .2s linear;
-        -moz-transition:  all .2s  linear;
-        &:hover {
-            color: #50C3C5;
-        }
-    }
-
-    &__para {
-        margin-bottom: 15px;
-        letter-spacing: 2px;
-        font-family: $quaver-san-serif;
-        font-size: 20px;
-    }
-
-    &__link {
-        color: #50C3C5;
-    }
-
-    &__arrow {
-        width: 90px;
-        margin-bottom: 8px;
-    }
-
-    &__back {
-        font-family: $quaver-san-serif;
-        font-size: 20px;
-        color: $white;
-        transition: all .2s linear;
-        -webkit-transition:  all .2s linear;
-        -moz-transition:  all .2s  linear;
-        &:hover {
-            color: #50C3C5;
-        }
-
-    }
 }

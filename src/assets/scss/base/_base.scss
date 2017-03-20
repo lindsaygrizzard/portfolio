@@ -38,18 +38,19 @@ body {
     height: 60px !important;
 }
 
-
-
-
-.shape{
-   transition: all .5s linear;
-   -webkit-transition:  all .5s linear;
-   -moz-transition:  all .5s  linear;
+.bkwhite {
+    background-color: white;
 }
 
-.shape.more-opacity{
-  opacity: .5;
- transition: all .5s linear;
- -webkit-transition:  all .5s linear;
- -moz-transition:  all .5s  linear;
+.shape {
+    transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s  linear;
+}
+
+.shape.more-opacity {
+    opacity: .5;
+    transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s  linear;
 }

@@ -1,17 +1,15 @@
 /* Color of the arrows */
 .slick-next::before, .slick-prev::before {
-  color: blue;
+    color: blue;
 }
 
 .slick-carousel {
-  cursor: pointer;
-  @media (max-width: $mq-small) {
-      width: 70vw;
-  }
-  
+    cursor: pointer;
+
+    @media (max-width: $mq-small) {
+        width: 70vw;
+    }
 }
-
-
 
 ///vonnda Slide
 // #vonnda_svg {
@@ -21,10 +19,11 @@
 //   margin-top: -50px;
 // }
 
-
 .work {
     &-slide-header {
-        margin-top: 20%;
+        position: relative;
+        margin-top: 25%;
+        margin-bottom: 400px;
         text-align: center;
         color: #fff;
     }
@@ -43,12 +42,14 @@
 
     &-slide-intro {
         width: 400px;
-        margin: 20% auto 0;
+
+        // margin: 20% auto 0;
         color: white;
         text-align: center;
+        background-color: grey;
     }
 
-    &-primary-title{
+    &-primary-title {
         font-size: 45px;
     }
 
@@ -66,8 +67,10 @@
         font-family: $quaver-san-serif;
         text-transform: uppercase;
         transition: all .2s linear;
+
         &:hover {
             background-color: white;
+
             a {
                 color: black;
             }
@@ -75,16 +78,14 @@
 
         a {
             color: white;
-            // font-weight: bold;
         }
     }
 
-    &-slide-secondary{
-        background-color: white;
+    &-slide-secondary {
         margin: 100px auto 0;
     }
 
-    &-slide-secondary-intro{
+    &-slide-secondary-intro {
         width: 75%;
         margin: 0 auto;
         padding: 75px 0;
@@ -94,18 +95,19 @@
 
     &-secondary-title {
         font-size: 45px;
-
     }
 
     &-secondary-para {
-         color: black;
-         font-family: $quaver-san-serif;
-         font-size: 20px;
-
+        color: black;
+        font-family: $quaver-san-serif;
+        font-size: 20px;
     }
 
+    &-layout-image {
+        width: 70%;
+        margin: 0 auto;
+    }
 }
-
 
 //     &-image-container {
 //         position: relative;
@@ -133,8 +135,8 @@
 
 //     &-word {
 //         display: none;
-//     } 
-    
+//     }
+
 //     &-text-container {
 //         margin-top: 7%;
 //     }
@@ -180,7 +182,7 @@
 //     &-button {
 //         font-size: 14px;
 //         margin-top: 10%;
-        
+
 //         a {
 //             padding: 10px 25px;
 //             font-size: 12px;
@@ -193,7 +195,7 @@
 //                 background-color: black;
 //                 color: white;
 //             }
-            
+
 //         }
 //     }
 
@@ -227,12 +229,16 @@
 }
 
 .slick-next {
-    right: 0;
+    right: 10px;
+}
+
+.slick-prev {
+    left: 10px;
 }
 
 .slick-next, .slick-prev {
     z-index: 9999;
-    position: absolute;
+    position: fixed;
     display: block;
     height: 20px;
     width: 20px;
@@ -241,10 +247,10 @@
     cursor: pointer;
     background: transparent;
     color: transparent;
-    top: 27%;
+    top: 49%;
     margin-top: -10px;
     padding: 0;
     border: none;
     outline: none;
+    background-color: red;
 }
-
