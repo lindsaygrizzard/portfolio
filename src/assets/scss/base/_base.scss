@@ -11,6 +11,13 @@ body {
     letter-spacing: 2px;
 }
 
+a {
+    color: #50C3C5;
+    &:hover {
+        color: white;
+    }
+}
+
 .hide {
     display: none;
 }
@@ -38,18 +45,27 @@ body {
     height: 60px !important;
 }
 
-
-
-
-.shape{
-   transition: all .5s linear;
-   -webkit-transition:  all .5s linear;
-   -moz-transition:  all .5s  linear;
+.bkwhite {
+    background-color: white;
 }
 
-.shape.more-opacity{
-  opacity: .5;
- transition: all .5s linear;
- -webkit-transition:  all .5s linear;
- -moz-transition:  all .5s  linear;
+.white-font {
+    color: white !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.shape {
+    transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s  linear;
+}
+
+.shape.more-opacity {
+    opacity: .5;
+    transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s  linear;
 }
