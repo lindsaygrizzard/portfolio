@@ -53,6 +53,26 @@
         text-align: center;
     }
 
+    &-slide-more-arrow {
+        position: absolute;
+        bottom: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .arrow {
+            margin: 0 auto 20px;
+            height: 20px;
+            width: 40px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(/assets/img/down.png);
+        }
+
+        .para {
+            color: #aaa;
+        }
+    }
+
     &-primary-title {
         font-size: 45px;
     }
