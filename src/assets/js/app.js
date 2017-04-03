@@ -518,7 +518,7 @@ $('.slick-carousel').slick({
 
   var randColorArray =['cb7330', '9b5424', 'c46220', '5bbfa0', '50a086', '10596B','a0c24e', '90a843'];
 
-  var blueColorArray =['111', '222', '333', '444', '555','666', '777', '8888', '999', 'aaa', 'bbb', 'ccc', 'ddd'];
+  var greyColorArray =['111', '222', '333', '444', '555','666', '777', '8888', '999', 'aaa', 'bbb', 'ccc', 'ddd'];
 
   function randomFillColor(){
     var fillColor = randColorArray[Math.floor(Math.random() * randColorArray.length)+1];
@@ -526,7 +526,7 @@ $('.slick-carousel').slick({
   };
 
   function blueFillColor(){
-    var fillColor = blueColorArray[Math.floor(Math.random() * blueColorArray.length)+1];
+    var fillColor = randColorArray[Math.floor(Math.random() * randColorArray.length)+1];
     return fillColor;
   };
 

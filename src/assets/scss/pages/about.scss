@@ -4,6 +4,17 @@
     height: 80vh;
     margin: 10vh auto;
     text-align: center;
+    .see-more__container {
+        text-align: left;
+        clear: both;
+        color: #ffffff;
+        z-index: 99999;
+        width: 100%;
+        margin-left: 15%;
+        margin-top: 0px;
+        margin-bottom: 80px;
+        float: left;
+    }
 }
 
 // .about-header {
@@ -23,7 +34,7 @@
     top: -66px;
 
     svg {
-        height: 116vh;
+        height: 124vh;
         right: -4%;
         top: -100px;
         position: absolute;
@@ -59,7 +70,7 @@
     }
 
     @media (max-width: $mq-med) {
-        min-width: 100%;
+        min-width: 80%;
         right: -20%;
     }
 
@@ -78,16 +89,19 @@
     }
 
     &__secondary {
-        width: 56%;
-        margin-top: 175px;
-        float: right;
+        width: 83%;
+        margin-top: 100vh;
+        float: left;
+        margin-left: 15%;
 
         @media (max-width: $mq-xlarge) {
-            width: 60%;
+            width: 83%;
+            margin-left: 15%;
         }
 
         @media (max-width: $mq-med) {
             width: 83%;
+            margin-left: 15%;
         }
 
         @media (max-width: $mq-small) {
@@ -107,7 +121,6 @@
     text-align: left;
     font-family: $quaver-san-serif;
     font-size: 30px;
-    font-weight: bold;
     color: #ddd;
     letter-spacing: 4px;
     line-height: 1.3;
