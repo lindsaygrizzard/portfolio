@@ -1,11 +1,12 @@
 .work {
+    overflow-x: visible;
+
     .see-more {
         &__container {
             text-align: left;
             clear: both;
             color: #ffffff;
             z-index: 99999;
-            width: 100%;
             margin-left: 15%;
             margin-top: 0px;
             margin-bottom: 80px;
@@ -32,6 +33,10 @@
 
         @media (max-width: $mq-med) {
             top: 45%;
+        }
+
+        @media (max-width: $mq-small) {
+            font-size: 45px;
         }
     }
 
@@ -65,7 +70,7 @@
 
     &-slide-more-arrow {
         position: absolute;
-        bottom: 10px;
+        bottom: 8px;
         left: 50%;
         transform: translateX(-50%);
 
@@ -74,12 +79,18 @@
         }
 
         .arrow {
-            margin: 0 auto 20px;
-            height: 20px;
-            width: 60px;
+            margin: 0 auto 13px;
+            height: 50px;
+            width: 50px;
+            text-align: center;
             background-size: contain;
             background-repeat: no-repeat;
             background-image: url(/assets/img/down.png);
+
+            svg line {
+                animation: fillColor 3s infinite;
+                -webkit-animation: fillColor 3s infinite;
+            }
 
             @media (max-width: $mq-med) {
                 margin: 0 auto 10px;
@@ -87,7 +98,10 @@
         }
 
         .para {
+            margin-bottom: 0;
             color: #aaa;
+            animation: fontColor 3s infinite;
+            -webkit-animation: fontColor 3s infinite;
         }
     }
 
@@ -97,7 +111,7 @@
 
     &-primary-para {
         text-align: center;
-        font-size: 20px;
+        font-size: 22px;
         font-family: $quaver-san-serif;
 
         @media (max-width: $mq-small) {
@@ -109,7 +123,7 @@
         display: inline-block;
         padding: 2px 20px 0;
         border: 1px solid #aaa;
-        font-size: 20px;
+        font-size: 22px;
         font-family: $quaver-san-serif;
         text-transform: uppercase;
         transition: all .2s linear;
@@ -146,7 +160,7 @@
     &-secondary-para {
         color: black;
         font-family: $quaver-san-serif;
-        font-size: 20px;
+        font-size: 22px;
         width: 50%;
 
         @media (max-width: $mq-med) {
@@ -190,7 +204,7 @@
 
 .slick-prev:before, .slick-next:before {
     font-family: 'slick';
-    font-size: 20px;
+    font-size: 22px;
     line-height: 1;
     color: white;
     opacity: 0.75;
@@ -199,7 +213,7 @@
 
 .slick-prev:before, .slick-next:before {
     font-family: 'slick';
-    font-size: 20px;
+    font-size: 22px;
     line-height: 1;
     color: white;
     opacity: 0.75;

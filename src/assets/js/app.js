@@ -526,7 +526,7 @@ $('.slick-carousel').slick({
   };
 
   function blueFillColor(){
-    var fillColor = randColorArray[Math.floor(Math.random() * randColorArray.length)+1];
+    var fillColor = greyColorArray[Math.floor(Math.random() * greyColorArray.length)+1];
     return fillColor;
   };
 
@@ -546,7 +546,7 @@ $('.slick-carousel').slick({
     $(this).addClass("more-opacity").delay(1300).queue(function(next){
         $(this).removeClass("more-opacity");
         next();
-       $(this).css('fill', '#'+blueFillColor());
+       $(this).css('fill', '#'+randomFillColor());
       next();
     });
   });

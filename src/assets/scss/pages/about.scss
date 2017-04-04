@@ -4,6 +4,7 @@
     height: 80vh;
     margin: 10vh auto;
     text-align: center;
+
     .see-more__container {
         text-align: left;
         clear: both;
@@ -17,31 +18,30 @@
     }
 }
 
-// .about-header {
-//     height: 100%;
-//     position: relative;
-
-//     @media (max-width: $mq-small) {
-//         height: 50%;
-//     }
-// }
-
 .about-triangles {
     z-index: 9;
     width: 100%;
-    right: -140px;
+    right: -240px;
     position: absolute;
     top: -66px;
 
     svg {
         height: 124vh;
-        right: -4%;
-        top: -100px;
         position: absolute;
+        top: -275px;
 
         @media (max-width: $mq-xlarge) {
-            right: -8%;
-            top: -200px;
+            // right: -540px;
+            top: -100px;
+        }
+
+        @media (max-width: $mq-large) {
+            right: -200px;
+            top: -100px;
+        }
+
+        @media (max-width: $mq-med) {
+            right: -390px;
         }
 
         @media (max-width: $mq-small) {
@@ -54,7 +54,7 @@
     position: absolute;
     bottom: -12%;
     right: 1%;
-    width: 55%;
+    width: 50%;
     opacity: .4;
     transition: opacity 2s;
     -webkit-transition: all 2s linear;
@@ -64,8 +64,12 @@
         opacity: .65;
     }
 
+    @media (max-width: 114em) {
+        width: 55%;
+    }
+
     @media (max-width: $mq-xlarge) {
-        width: 65%;
+        width: 55%;
         right: -5%;
     }
 
